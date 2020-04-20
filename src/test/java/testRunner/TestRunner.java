@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "C:\\Users\\admin\\Desktop\\TestAutomation\\FreeCRMBDDFramework\\features\\OrangeHRM.feature",
-		glue = "stepDefinition"		
+		glue = {"stepDefinition"}		//, format= {"pretty","html:test-output"}
 		)
 public class TestRunner {
 

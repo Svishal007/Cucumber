@@ -1,10 +1,15 @@
-Feature: Orange HRM Login
+Feature: Free CRM Login
 
-Scenario: Logo present Orange HRM page
-Given I launch chrome browser
-When I open orange HRM page
-Then I Verify that the logo present on page
-And close browser
+Scenario: Free CRM Login page
+Given User is already login page
+When Title of the login page is Free CRM
+Then user enters username & password
+Then user clicks on login button
+Then user is on home page
+Then close the browser
+
+
+
 
 
 
