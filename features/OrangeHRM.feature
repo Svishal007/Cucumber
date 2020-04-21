@@ -9,6 +9,14 @@ Then user is on home page
 Then close the browser
 
 
+#Scenario: user is able to create new contact
+#Given user is on home page
+#When user clicks on contacts
+#Then user clicks on new contact
+#Then user enters the values
+#Then user click on save button
+#Then verify contact has been created
+
 
 
 
