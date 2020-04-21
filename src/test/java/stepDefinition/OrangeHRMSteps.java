@@ -27,6 +27,8 @@ public void title_of_the_login_page_is_Free_CRM() {
  Assert.assertEquals("Free CRM #1 cloud software for any business large or small", title);
  System.out.println("Title is "+ title);
 }
+
+// we can use either  \"([^\*)\"  or \"(.*)\"
 @Then("^user enters \"(.*)\" and \"(.*)\"$")
 public void user_enters_username_password(String username, String pwd) {
 		/*
@@ -50,6 +52,18 @@ public void user_is_on_home_page() {
 	
 	System.out.println("User is at home page");
 }
+@Then("user moves to new contact page")
+public void user_moves_to_new_contact_page() {
+	System.out.println("bgkdgkzk");
+	
+
+}
+@Then("^user enters contact details \"(.*)\" and \"(.*)\" and \"(.*)\"$")
+public void user_enters_contact_details(String firstname, String lastname, String position) {
+	
+}
+
+
 
 @Then("close the browser")
 public void close_the_browser() {
