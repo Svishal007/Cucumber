@@ -27,15 +27,15 @@ public void title_of_the_login_page_is_Free_CRM() {
  Assert.assertEquals("Free CRM #1 cloud software for any business large or small", title);
  System.out.println("Title is "+ title);
 }
-@Then("user enters username & password")
-public void user_enters_username_password() {
+@Then("^user enters \"(.*)\" and \"(.*)\"$")
+public void user_enters_username_password(String username, String pwd) {
 		/*
 		 * JavascriptExecutor js = (JavascriptExecutor)driver; js.executeScript(script,
 		 * args)
 		 */
 	driver.findElement(By.xpath("//span[contains(text(),'Log In')]")).click();
-	driver.findElement(By.name("email")).sendKeys("sonkusare.vishal1@gmail.com");
-	driver.findElement(By.name("password")).sendKeys("99Sonkusare");
+	driver.findElement(By.name("email")).sendKeys(username);
+	driver.findElement(By.name("password")).sendKeys(pwd);
 	System.out.println("Password provided");
 
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="29.672">
-<testcase classname="Free CRM Login" name="Free CRM Login page" time="29.024">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.57">
+<testcase classname="Free CRM Login" name="Free CRM Login page" time="20.909">
 <system-out><![CDATA[Given User is already login page............................................passed
 When Title of the login page is Free CRM....................................passed
-Then user enters username & password........................................passed
+Then user enters "Vishal" and "password"....................................passed
 Then user clicks on login button............................................passed
 Then user is on home page...................................................passed
 Then close the browser......................................................passed

@@ -30,11 +30,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters username \u0026 password",
+  "name": "user enters \"Vishal\" and \"password\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinition.OrangeHRMSteps.user_enters_username_password()"
+  "location": "stepDefinition.OrangeHRMSteps.user_enters_username_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
