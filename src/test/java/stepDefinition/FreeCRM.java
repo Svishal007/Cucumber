@@ -1,21 +1,26 @@
 package stepDefinition;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 
-public class OrangeHRMSteps {
+public class FreeCRM {
 	WebDriver driver;
 
 @Given("User is already login page")
 public void user_is_already_login_page() {
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Desktop\\TestAutomation\\FreeCRMBDDFramework\\Driver\\Chrome\\chromedriver.exe");
+	
     driver = new ChromeDriver();
     driver.get("https://www.freecrm.co.in//");
     System.out.println("Link opened : ");
@@ -49,17 +54,21 @@ public void user_clicks_on_login_button() {
 
 @Then("user is on home page")
 public void user_is_on_home_page() {
-	
-	System.out.println("User is at home page");
+	String hometitle = driver.getTitle();
+	Assert.assertEquals("Cogmento CRM", hometitle);
+	System.out.println("User is at home page ****************");
 }
 @Then("user moves to new contact page")
-public void user_moves_to_new_contact_page() {
-	System.out.println("bgkdgkzk");
-	
-
+public void user_moves_to_new_contact_page() throws Exception {
+	//driver.findElement(By.partialLinkText("https://ui.freecrm.com/contacts/new")).click();
+	driver.navigate().to("https://ui.freecrm.com/contacts/new");
+	Thread.sleep(5000);
 }
-@Then("^user enters contact details \"(.*)\" and \"(.*)\" and \"(.*)\"$")
+@Then("user enters contact details {string} and {string} and {string}")
 public void user_enters_contact_details(String firstname, String lastname, String position) {
+//	driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys(firstname);
+//	driver.findElement(By.name("last_name")).sendKeys(lastname);
+//	driver.findElement(By.name("position")).sendKeys(position);
 	
 }
 
@@ -67,7 +76,7 @@ public void user_enters_contact_details(String firstname, String lastname, Strin
 
 @Then("close the browser")
 public void close_the_browser() {
-    driver.quit();
+    //driver.quit();
 }
 
 
